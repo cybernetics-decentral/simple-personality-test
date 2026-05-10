@@ -1,0 +1,153 @@
+:root {
+  color-scheme: light;
+  color: #102134;
+  background: #f4f7fb;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #e8f1fb 0%, #ffffff 100%);
+}
+
+.app-shell {
+  width: min(100%, 760px);
+  margin: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #dde4ed;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(16, 33, 52, 0.12);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.brand span {
+  font-size: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+}
+
+p {
+  margin: 0.75rem auto 0;
+  max-width: 38rem;
+  line-height: 1.7;
+  color: #42516f;
+}
+
+main {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: #f8fbff;
+  border: 1px solid #dde4ed;
+  border-radius: 20px;
+  padding: 1.3rem;
+}
+
+.question {
+  display: grid;
+  gap: 1rem;
+}
+
+.question h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button,
+input[type="button"] {
+  appearance: none;
+  border: none;
+  padding: 0.95rem 1.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+button:hover,
+input[type="button"]:hover {
+  transform: translateY(-1px);
+}
+
+.primary {
+  background: #0a4b6b;
+  color: #fff;
+}
+
+.secondary {
+  background: #e6eef7;
+  color: #0f2b42;
+}
+
+.result {
+  display: grid;
+  gap: 1rem;
+}
+
+.result h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-section {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.profile-section h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0a4b6b;
+}
+
+.profile-section p {
+  margin: 0;
+  color: #42516f;
+  line-height: 1.75;
+}
+
+footer {
+  text-align: center;
+  color: #6b7a92;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
