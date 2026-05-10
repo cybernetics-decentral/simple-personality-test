@@ -93,12 +93,24 @@ input[type="button"] {
   border-radius: 999px;
   cursor: pointer;
   font: inherit;
-  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+  transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
 button:hover,
 input[type="button"]:hover {
   transform: translateY(-1px);
+}
+
+.choice-button {
+  background: #e6eef7;
+  color: #0f2b42;
+  border: 1px solid transparent;
+}
+
+.choice-button.selected {
+  background: #0a4b6b;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(10, 75, 107, 0.18);
 }
 
 .primary {

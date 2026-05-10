@@ -211,8 +211,8 @@ function renderQuiz() {
           <div class="card" id="${q.id}">
             <h3>${q.prompt}</h3>
             <div class="buttons">
-              <button class="primary" data-question="${q.id}" data-answer="yes">${q.yesLabel}</button>
-              <button class="secondary" data-question="${q.id}" data-answer="no">${q.noLabel}</button>
+              <button class="choice-button" data-question="${q.id}" data-answer="yes">${q.yesLabel}</button>
+              <button class="choice-button" data-question="${q.id}" data-answer="no">${q.noLabel}</button>
             </div>
           </div>
         `).join('')}
@@ -247,8 +247,8 @@ function renderQuiz() {
 
       state.answers[questionId] = value;
       const parent = button.closest('.card');
-      parent.querySelectorAll('button').forEach(btn => btn.classList.toggle('primary', btn === button));
-      parent.querySelectorAll('button').forEach(btn => btn.classList.toggle('secondary', btn !== button));
+      parent.querySelectorAll('button[data-question]').forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
       updateProgress();
     });
   });
